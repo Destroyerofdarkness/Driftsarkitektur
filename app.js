@@ -4,7 +4,11 @@ const os = require("os")
 
 const app = express();
 
+const mongoDbHandler = require("./handlers/mongoDbHandler.js")
+
 const default_router = require("./routes/default_routes.js")
+
+app.use(mongoDbHandler.connectToMongoDb)
 
 app.use(express.urlencoded({extended:true}))
 

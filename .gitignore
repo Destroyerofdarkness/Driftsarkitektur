@@ -129,7 +129,7 @@ dist
 # yarn v3
 .pnp.*
 .yarn/*
-!.yarn/patches
+!.jarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
