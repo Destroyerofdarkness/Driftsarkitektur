@@ -8,7 +8,7 @@ const mongoDbHandler = require("./handlers/mongoDbHandler.js")
 
 const default_router = require("./routes/default_routes.js")
 
-app.use(mongoDbHandler.connectToMongoDb)
+mongoDbHandler.connectToMongoDb();
 
 app.use(express.urlencoded({extended:true}))
 
