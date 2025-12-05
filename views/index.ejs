@@ -45,6 +45,7 @@
     </main>
     <section>
       <% puppies.forEach(puppy => {%>
+        <a href="/puppy/<%= puppy.Navn %>">
         <div>
           <img src="<%= puppy.Bildelenke %>" alt="">
           <h2>Navn: <%= puppy.Navn %></h2>
@@ -53,6 +54,7 @@
           <p>Power: <%= puppy.Power %></p>
           <p></p>
         </div>
+        </a>
       <%}); %>
     </section>
   </body>

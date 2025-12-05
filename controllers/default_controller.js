@@ -11,6 +11,21 @@ const render_index = async (req,res)=>{
     }
 }
 
+const puppy_render = async (req,res)=>{
+    const pup = req.params.navn
+    console.log(pup)
+    try{
+        const foundPuppy = await puppy.findOne({
+            Navn: pup
+        })
+        res.render("puppy_page",{puppy: foundPuppy})
+    }
+    catch{
+        res.status(500).send("Internal Server Error", err)
+    }
+}
+
 module.exports = {
-    render_index
+    render_index,
+    puppy_render,
 }
