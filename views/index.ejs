@@ -43,6 +43,18 @@
       rise
     </p>
     </main>
+    <section>
+      <% puppies.forEach(puppy => {%>
+        <div>
+          <img src="<%= puppy.Bildelenke %>" alt="">
+          <h2>Navn: <%= puppy.Navn %></h2>
+          <p>Bestevenn: <%= puppy.Bestevenn %></p>
+          <p>Fødselsdato: <%= puppy.Fødselsdato %></p>
+          <p>Power: <%= puppy.Power %></p>
+          <p></p>
+        </div>
+      <%}); %>
+    </section>
   </body>
-  <footer><p>i goon to femboys</p></footer>
+  <footer></footer>
 </html>

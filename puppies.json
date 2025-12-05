@@ -1,0 +1,58 @@
+[
+  {
+    "Navn": "Luna",
+    "Power": "Superhopp",
+    "Bestevenn": "Milo",
+    "Fødselsdato": "2023.01.14",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy.jpg"
+  },
+  {
+    "Navn": "Milo",
+    "Power": "Lyd-booster",
+    "Bestevenn": "Luna",
+    "Fødselsdato": "2023.02.03",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy2.jpg"
+  },
+  {
+    "Navn": "Bella",
+    "Power": "Supersniff",
+    "Bestevenn": "Rocky",
+    "Fødselsdato": "2022.12.22",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy3.jpg"
+  },
+  {
+    "Navn": "Rocky",
+    "Power": "Stålkjeve",
+    "Bestevenn": "Bella",
+    "Fødselsdato": "2022.11.30",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy4.jpg"
+  },
+  {
+    "Navn": "Nova",
+    "Power": "Lysblink",
+    "Bestevenn": "Zeke",
+    "Fødselsdato": "2023.03.10",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy5.jpg"
+  },
+  {
+    "Navn": "Zeke",
+    "Power": "Turbohale",
+    "Bestevenn": "Nova",
+    "Fødselsdato": "2023.04.18",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy6.jpg"
+  },
+  {
+    "Navn": "Kira",
+    "Power": "Vindløp",
+    "Bestevenn": "Atlas",
+    "Fødselsdato": "2023.01.27",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy7.jpg"
+  },
+  {
+    "Navn": "Atlas",
+    "Power": "Superstyrke",
+    "Bestevenn": "Kira",
+    "Fødselsdato": "2022.12.10",
+    "Bildelenke": "http://10.12.14.202/img/puppy/puppy8.jpg"
+  }
+]
