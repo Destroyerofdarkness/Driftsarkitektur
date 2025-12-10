@@ -1,9 +1,11 @@
 const router = require("express").Router();
 
-const controller = require("../controllers/default_controller.js")
+const controller = require("../controllers/default_controller.js");
 
-router.get("/", controller.render_index)
+router.get("/", controller.render_index);
 
-router.get("/puppy/:navn", controller.puppy_render)
+router.get("/puppy/:navn", controller.puppy_render);
 
-module.exports = router
+router.post("/", controller.destroy_session)
+
+module.exports = router;
