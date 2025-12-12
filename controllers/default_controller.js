@@ -31,7 +31,7 @@ const destroy_session = async (req,res)=>{
         res.redirect("/login")
     }catch(err){
         console.log(err)
-        res.status(200).send(err)
+        res.status(300).send(err)
     }
 }
 
