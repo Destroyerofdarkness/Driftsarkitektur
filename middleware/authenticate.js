@@ -1,23 +1,21 @@
 const User = require("../models/user.js");
 
+const jwt = require("jsonwebtoken")
+
 const authenticate = async (req, res, next) => {
-  const user = req.session.userId;
-  try {
-    if (user) {
-      const userExist = await User.findById(user);
-      if (userExist) {
-        console.log("Verified User succesfully");
-        next();
-        return;
-      }
-      throw new Error(
-        "Authentication failed. Didn't find user in the database"
-      );
-    }
-    throw new Error("Authentication failed. Didn't find session");
-  } catch (err) {
-    console.log(err);
-    res.redirect("/login");
+  const token = req.cookie.jwt
+  if(token){
+    await jwt.verify(token, "secret", (err, decodedToken)=>{
+        if(err){
+            console.log(err.message)
+            res.redirect("/login")
+        }else{
+            console.log(decodedToken)
+            next()
+        }
+    })
+  }else{
+    res.redirect("/login")
   }
 };
 

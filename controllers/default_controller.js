@@ -1,5 +1,7 @@
 const puppy = require("../models/puppies.js")
 
+
+
 const render_index = async (req,res)=>{
     try{
         const puppies = await puppy.find()

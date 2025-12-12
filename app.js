@@ -4,7 +4,7 @@ const os = require("os")
 
 const app = express();
 
-const session = require("express-session")
+const cookieParser = require("cookie-parser")
 
 const mongoDbHandler = require("./handlers/mongoDbHandler.js")
 
@@ -20,15 +20,7 @@ app.use(express.json())
 
 app.set("view engine", "ejs")
 
-app.use(session({
-    secret: "AshenOne",
-    resave: false,
-    saveUninitialized: false,
-    cookie:{
-        maxAge: 1000 *60 *10,
-        secure: false
-    }
-}))
+app.use(cookieParser())
 
 app.use(default_router)
 

@@ -22,10 +22,9 @@ const login_user = async (req,res)=>{
     try{
         const foundUser = await User.findOne({user:user})
         if(foundUser.pass == pass){
-            req.session.userId = foundUser._id
-            console.log(req.session)
             const token = createToken(foundUser._id)
             console.log(token)
+            res.cookie("jwt", token, {httpOnly: true, maxAge: 1000*1000})
             res.redirect("/")
         }
     }catch(err){
