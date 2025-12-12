@@ -27,18 +27,9 @@ const puppy_render = async (req,res)=>{
     }
 }
 
-const destroy_session = async (req,res)=>{
-    try{
-        req.session.destroy()
-        res.redirect("/login")
-    }catch(err){
-        console.log(err)
-        res.status(300).send(err)
-    }
-}
+
 
 module.exports = {
     render_index,
     puppy_render,
-    destroy_session
 }

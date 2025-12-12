@@ -3,8 +3,8 @@ const User = require("../models/user.js");
 const jwt = require("jsonwebtoken")
 
 const authenticate = async (req, res, next) => {
-  const token = req.cookie.jwt
-  if(token){
+  const token = req.cookies.jwt
+  try{
     await jwt.verify(token, "secret", (err, decodedToken)=>{
         if(err){
             console.log(err.message)
@@ -14,8 +14,9 @@ const authenticate = async (req, res, next) => {
             next()
         }
     })
-  }else{
-    res.redirect("/login")
+   }catch(err){
+    console.log(err)
+    res.status(401).redirect("/login")
   }
 };
 

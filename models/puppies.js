@@ -1,5 +1,7 @@
-const mongoose = require("mongoose")
-const { Schema, model } = mongoose
+const mongoose = require("mongoose");
+const { Schema, model } = mongoose;
+
+const argon2 = require("argon2")
 
 const puppySchema = new Schema({
     Navn:{
@@ -24,7 +26,18 @@ const puppySchema = new Schema({
     }
 })
 
+
 const puppies = model("Puppies", puppySchema)
+
+puppySchema.pre("save", async function(next){
+try{
+ this.passwd = await argon2.hash(this.pass)
+ next()
+
+}catch(err){
+    next(err)
+}
+})
 
 
 module.exports = puppies

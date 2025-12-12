@@ -18,7 +18,7 @@ const render_login = (req,res)=>{
 };
 
 const login_user = async (req,res)=>{
-    const {user,pass} = req.body
+    const {user, pass} = req.body
     try{
         const foundUser = await User.findOne({user:user})
         if(foundUser.pass == pass){
@@ -33,6 +33,11 @@ const login_user = async (req,res)=>{
     }
 }
 
+const logout_user = async(req,res)=>{
+    res.cookie("jwt", '', {maxAge: 1})
+    res.redirect("/login")
+}
+
 
 
 
@@ -40,4 +45,5 @@ const login_user = async (req,res)=>{
 module.exports = {
   render_login,
   login_user,
+  logout_user
 }

@@ -8,6 +8,4 @@ router.get("/", authenticate ,controller.render_index);
 
 router.get("/puppy/:navn", authenticate, controller.puppy_render);
 
-router.post("/", controller.destroy_session)
-
 module.exports = router;
