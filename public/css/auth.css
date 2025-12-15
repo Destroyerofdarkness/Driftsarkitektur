@@ -1,0 +1,45 @@
+html, body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: blue;
+    width: 100%;
+    margin-bottom: 3vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1vw;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin: 1vw;
+}
+nav a{
+    font-size: 2vw;
+    text-decoration: none;
+    border-radius: 0.7vw;
+    background-color: white;
+    color: blue;
+    padding: 0.3vw;
+}
+form input{
+    width: 15vw;
+    font-size: 1vw;
+    border-radius: 0.3vw;
+    height: auto;
+}
+form button{
+    font-size: 1vw;
+    color: white;
+    border-radius: 0.7vw;
+    background-color: blue;
+    padding: 0.7vw;
+}

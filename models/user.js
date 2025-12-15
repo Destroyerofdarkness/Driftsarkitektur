@@ -17,7 +17,7 @@ userSchema.statics.login = async function(username,passwd) {
         const User = await user.findOne({user:username})
         if(User){
         console.log("USER:",User)
-        const pass = argon2.verify(User.pass, passwd)
+        const pass = await argon2.verify(User.pass, passwd)
         if(pass){
         return User;
         }
