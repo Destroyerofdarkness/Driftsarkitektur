@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puppy</title>
+    <link rel="stylesheet" href="/css/puppiesPage.css">
 </head>
 <body>
 <%- include("./partials/header.ejs") %>
-    <div>
+    <div class="puppy">
           <img src="<%= puppy.Bildelenke %>" alt="">
           <h2>Navn: <%= puppy.Navn %></h2>
           <p>Bestevenn: <%= puppy.Bestevenn %></p>
@@ -15,5 +16,4 @@
           <p>Power: <%= puppy.Power %></p>
           <p></p>
         </div>
-</body>
-</html>
+<%- include("./partials/footer.ejs") %>
